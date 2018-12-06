@@ -1,0 +1,47 @@
+html{
+    font-family: Arial;
+}
+
+h1.header {
+    text-align: center;
+    font-size: 60px;
+}
+
+span.desy_blue {
+    color: RGB(0,166,235);
+}
+
+span.desy_orange {
+    color: RGB(242,142,0);
+    font-family: Comic Sans;
+}
+
+
+.bordercontainer {
+    display: flex;
+    width: 3%;
+    height: 60px;
+}
+
+.borderline{
+    flex: 97%;
+}
+
+.bordercirle{
+    flex: 4%;
+}
+
+hr.desy {
+    margin-top: 30px;
+    border: none;
+    height: 4px;
+    background-color: RGB(0,166,235);
+}
+
+span.desy {
+    height: 60px;
+    width: 60px;
+    background-color: RGB(0,166,235);
+    border-radius: 50%;
+    display: inline-block;
+}
