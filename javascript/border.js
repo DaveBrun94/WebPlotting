@@ -15,7 +15,6 @@ function expandBorder(){
             length_string = length.toString() + "%";
 
             border.style.width = length_string;
-            console.log(length);
         }
     }
 }
