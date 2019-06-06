@@ -34,7 +34,8 @@
 
     function write_index($d)
     {
-        copy("php/templates/index.php", "$d/index.php");
+        $dir = realpath($d);    
+        copy("/eos/home-d/dbrunner/www/php/templates/index.php", "$dir/index.php");
     }
     
     function hello(){
