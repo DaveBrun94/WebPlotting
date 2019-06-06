@@ -22,11 +22,14 @@
 
         <?php
             include "php/utility.php";
-            $dircontent = what_in_dir("Plots");
+            $dircontent = what_in_dir("Plots");         
+            $abspath = dirname(__FILE__);
             
             foreach($dircontent["dir"] as $d){
-                write_index($d);
-                echo "<p><a href='$d/index.php'>$d</a></p> \n";
+                write_index("$abspath/$d");
+                $dir = end(explode("/", $d));
+
+                echo "<p><a href='$d/index.php'>$dir</a></p> \n";
             }
         ?>
     </body>
