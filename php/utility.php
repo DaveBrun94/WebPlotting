@@ -35,10 +35,14 @@
     function write_index($d)
     {
         $dir = realpath($d);    
-        copy("/eos/home-d/dbrunner/www/php/templates/index.php", "$dir/index.php");
-    }
-    
-    function hello(){
-        echo "hello";
+        $dircontent = what_in_dir($dir);  
+
+        if(!empty($dircontent["dir"])){
+            foreach($dircontent["dir"] as $dirName){
+                $dirName = realpath($dirName); 
+                copy("/eos/home-d/dbrunner/www/php/templates/index.php", "$dirName/index.php");
+                write_index("$dirName");
+            }
+        }
     }
 ?>
