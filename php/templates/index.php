@@ -40,6 +40,8 @@
                     echo "\t\t <div class = 'titlecontainer'> \n";
 
                     foreach($line as $ele){
+                        $title =  str_replace(".png", " \n", end(explode("/", $ele)));
+
                         include "/eos/home-d/dbrunner/www/php/templates/title.php";
                         echo "\n";
                     }
