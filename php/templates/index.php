@@ -22,10 +22,10 @@
         </div>
         
         <?php
-            include "/eos/home-d/dbrunner/www/php/utility.php";
+            $base = "REPLACE";
+            include "$base/php/utility.php";
 
             $dircontent = what_in_dir(".");
-            $abspath = dirname(__FILE__);
             
             foreach($dircontent["dir"] as $d){
                 $dir = end(explode("/", $d));
@@ -42,7 +42,7 @@
                     foreach($line as $ele){
                         $title =  str_replace(".png", " \n", end(explode("/", $ele)));
 
-                        include "/eos/home-d/dbrunner/www/php/templates/title.php";
+                        include "$base/php/templates/title.php";
                         echo "\n";
                     }
             
@@ -51,7 +51,7 @@
                     echo "\t\t <div class = 'picturecontainer'> \n";
             
                     foreach($line as $ele){
-                        include "/eos/home-d/dbrunner/www/php/templates/picture.php";
+                        include "$base/php/templates/picture.php";
                         echo "\n";
                     }
             
@@ -60,7 +60,7 @@
                     echo "\t\t <div class = 'footcontainer'> \n";
             
                     foreach($line as $ele){
-                        include "/eos/home-d/dbrunner/www/php/templates/footer.php";
+                        include "$base/php/templates/footer.php";
                         echo "\n";
                     }
             

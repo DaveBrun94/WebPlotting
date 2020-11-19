@@ -6,8 +6,7 @@
         $pngs = array();
         $pdfs = array();
 
-        foreach($dirls as $d){
-           
+        foreach($dirls as $d){           
             if($d == "." or $d == ".." or $d == "index.php"){
                 continue;
             }
@@ -32,16 +31,24 @@
         return $dircontent;
     }
 
-    function write_index($d)
+    function write_index($d, $n)
     {
-        $dir = realpath($d);    
-        $dircontent = what_in_dir($dir);  
+        $dircontent = what_in_dir($d);  
 
         if(!empty($dircontent["dir"])){
             foreach($dircontent["dir"] as $dirName){
-                $dirName = realpath($dirName); 
-                copy("/eos/home-d/dbrunner/www/php/templates/index.php", "$dirName/index.php");
-                write_index("$dirName");
+                copy("php/templates/index.php", "$dirName/index.php");
+
+                $relativeDir = "../";
+
+                for ($i = 0; $i < $n; $i++) {
+                    $relativeDir .= "../";
+                }
+    
+                file_put_contents("$dirName/index.php", str_replace('REPLACE', "$relativeDir", file_get_contents("$dirName/index.php")));
+    
+                $m = $n + 1;
+                write_index("$dirName", $m);
             }
         }
     }
