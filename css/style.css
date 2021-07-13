@@ -2,61 +2,6 @@ html{
     font-family: Arial;
 }
 
-h1.header {
-    text-align: center;
-    font-size: 60px;
-}
-
-a:link {
-  color: RGB(0,166,235);
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: RGB(242,142,0);
-  background-color: transparent;
-  text-decoration: none;
-}
-
-span.desy_blue {
-    color: RGB(0,166,235);
-}
-
-span.desy_orange {
-    color: RGB(242,142,0);
-    font-family: Comic Sans;
-}
-
-.bordercontainer {
-    display: flex;
-    width: 3%;
-    height: 60px;
-}
-
-.borderline{
-    flex: 96%;
-}
-
-.bordercirle{
-    flex: 4%;
-}
-
-hr.header {
-    margin-top: 30px;
-    border: none;
-    height: 4px;
-    background-color: RGB(0,166,235);
-}
-
-span.header {
-    height: 60px;
-    width: 60px;
-    background-color: RGB(0,166,235);
-    border-radius: 50%;
-    display: inline-block;
-}
-
 .picturecontainer{
     display: flex;
     width: 100%;
@@ -78,49 +23,16 @@ span.header {
 .titlecontainer{
     display: flex;
     width: 100%;
-    height: 50px;
+    height: 30px;
+    margin-top: 20px;
 }
 
 .title {
     flex: 30%;
-    max-width: 28.9%;
-    text-align: center;
-    margin-bottom: 13px;
-    margin-right: 5px;
-    margin-top: 5px;
-    font-size: 30px;
-    border-bottom: 3px solid RGB(0,166,235);
-}
-
-
-span.subheader {
-    height: 28px;
-    width: 28px;
-    background-color: RGB(0,166,235);
-    border-radius: 50%;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-.footcontainer{
-    display: flex;
-    height: 40px;
-    width: 100%;
-}
-
-.foot {
-    display: flex;
-    flex: 30%;
     max-width: 30%;
-    background-color: lightgrey;
+    text-align: center;
     margin-left: 5px;
     margin-right: 5px;
-    margin-bottom: 5px;
-    font-size: 20px;
-    border: solid 1px #ccc;
-} 
-
-.footcontent{
-    flex:50;
-    text-align: center;
+    font-size: 25px;
 }
+
